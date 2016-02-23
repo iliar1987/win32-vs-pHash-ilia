@@ -1,0 +1,4 @@
+LIBRARY   PHASH
+EXPORTS
+   ph_texthash   @1
+   ph_compare_text_hashes   @2

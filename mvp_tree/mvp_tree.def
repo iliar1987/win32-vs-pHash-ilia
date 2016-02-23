@@ -1,0 +1,12 @@
+LIBRARY   MVP_TREE
+EXPORTS
+	dp_alloc	@1
+	dp_free		@2
+	mvptree_alloc	@3
+	mvptree_clear	@4
+	mvptree_add	@5
+	mvptree_retrieve	@6
+	mvptree_write		@7
+	mvptree_read		@8
+	mvptree_print		@9
+	mvp_errstr		@10

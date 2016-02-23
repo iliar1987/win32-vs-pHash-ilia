@@ -66,6 +66,7 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <StackCommitSize>0</StackCommitSize>
       <ShowProgress>NotSet</ShowProgress>
+      <ModuleDefinitionFile>phash.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -87,6 +88,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalLibraryDirectories>..\zlib\win32;..\libpng-1.6.3\projects\vstudio\Release;..\jpeg-9\debug static;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>phash.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -99,6 +101,9 @@
     <ClInclude Include="phcomplex.h" />
     <ClInclude Include="ph_fft.h" />
     <ClInclude Include="pHash.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pHash.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

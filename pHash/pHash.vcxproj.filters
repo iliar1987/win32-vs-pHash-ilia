@@ -33,4 +33,7 @@
       <UniqueIdentifier>{3b7035eb-2a4e-445d-b2e7-7de4c4a1601c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="pHash.def" />
+  </ItemGroup>
 </Project>
