@@ -2,3 +2,27 @@ LIBRARY   PHASH
 EXPORTS
    ph_texthash   @1
    ph_compare_text_hashes   @2
+   ph_malloc_datapoint
+   ph_free_datapoint
+   ph_about
+   ph_radon_projections
+   ph_feature_vector
+   ph_dct
+   ph_crosscorr
+   ;_ph_image_digest
+   ;ph_image_digest
+   ;_ph_compare_images
+   ;ph_compare_images
+   ;ph_dct_matrix
+   ;ph_dct_imagehash
+   ;ph_bmb_imagehash
+   ;ph_dct_image_hashes
+   ;ph_dct_videohash
+   ;ph_dct_video_hashes
+   ;ph_dct_videohash_dist
+   ph_hamming_distance
+   ;ph_read_imagehashes
+   ;ph_mh_imagehash
+   ph_bitcount8
+   ph_hammingdistance2
+   ph_readfilenames
