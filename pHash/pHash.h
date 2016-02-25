@@ -25,6 +25,7 @@
 #ifndef _PHASH_H
 #define _PHASH_H
 
+#include "mydefs.h"
 
 #include <limits.h>
 #include <math.h>
