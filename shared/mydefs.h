@@ -1,3 +1,5 @@
+#pragma once
+
 #ifdef _MSC_VER
 #define DLL_EXPORT __declspec(dllexport)
 #else
@@ -6,9 +8,13 @@
 
 #define HAVE_STRUCT_TIMESPEC 1
 #include <stdio.h>
-FILE _iob[] = { *stdin, *stdout, *stderr };
+extern FILE _iob[3];
 
-extern "C" FILE * __cdecl __iob_func(void)
+#ifdef __cplusplus
+extern "C"
 {
-	return _iob;
+#endif
+	FILE * __cdecl __iob_func(void);
+#ifdef __cplusplus
 }
+#endif

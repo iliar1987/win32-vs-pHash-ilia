@@ -1,3 +1,5 @@
+#include "mydefs.h"
+
 #include <windows.h>
 #include <errno.h>
 #include <io.h>

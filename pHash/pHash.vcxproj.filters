@@ -10,6 +10,9 @@
     <ClCompile Include="phcomplex.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\mvp_tree\my_hacks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ph_fft.h">

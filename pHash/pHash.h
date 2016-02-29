@@ -25,6 +25,8 @@
 #ifndef _PHASH_H
 #define _PHASH_H
 
+#include <Windows.h>
+
 #include "mydefs.h"
 
 #include <limits.h>
