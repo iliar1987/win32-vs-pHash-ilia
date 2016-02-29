@@ -1,0 +1,32 @@
+data structure called the dictionary and has two broad classes of solutions:
+hashing, and search trees. In the literature of data structures, the entries in
+the vocabulary (in our case, terms) are often referred to as keys. The choice
+of solution (hashing, or search trees) is governed by a number of questions:
+(1) How many keys are we likely to have? (2) Is the number likely to remain
+static, or change a lot – and in the case of changes, are we likely to only have
+new keys inserted, or to also have some keys in the dictionary be deleted? (3)
+What are the relative frequencies with which various keys will be accessed?
+Hashing has been used for dictionary lookup in some search engines. Each
+vocabulary term (key) is hashed into an integer over a large enough space
+that hash collisions are unlikely; collisions if any are resolved by auxiliary
+structures that can demand care to maintain.1 At query time, we hash each
+query term separately and following a pointer to the corresponding postings,
+taking into account any logic for resolving hash collisions. There is no
+easy way to find minor variants of a query term (such as the accented and
+non-accented versions of a word like resume), since these could be hashed to
+very different integers. In particular, we cannot seek (for instance) all terms
+beginning with the prefix automat, an operation that we will require below
+in Section 3.2. Finally, in a setting (such as the Web) where the size of the
+vocabulary keeps growing, a hash function designed for current needs may
+not suffice in a few years’ time.
+Search trees overcome many of these issues – for instance, they permit us
+to enumerate all vocabulary terms beginning with automat. The best-known
+search tree is the binary tree, in which each internal BINARY TREE node has two children.
+The search for a term begins at the root of the tree. Each internal node (including
+the root) represents a binary test, based onwhose outcome the search
+proceeds to one of the two sub-trees below that node. Figure 3.1 gives an example
+of a binary search tree used for a dictionary. Efficient search (with a
+number of comparisons that is O(logM)) hinges on the tree being balanced:
+the numbers of terms under the two sub-trees of any node are either equal
+or differ by one. The principal issue here is that of rebalancing: as terms are
+inserted into or deleted from the binary search tree, it needs to be rebalanced
